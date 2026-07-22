@@ -1,0 +1,35 @@
+### Criar tarefa
+POST http://localhost:3333/tasks
+Content-Type: application/json
+
+{
+  "title": "Estudar Express"
+}
+
+###
+
+### Listar todas as tarefas
+GET http://localhost:3333/tasks
+
+###
+
+### Buscar tarefa por ID
+GET http://localhost:3333/tasks/1784750924195
+
+###
+
+### Atualizar tarefa
+PUT http://localhost:3333/tasks/1784750829424
+Content-Type: application/json
+
+{
+  "title": "Aprender TypeScript",
+  "completed": true
+}
+
+###
+
+### Excluir tarefa
+DELETE http://localhost:3333/tasks/1784750924195
+
+###
