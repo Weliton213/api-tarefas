@@ -1,0 +1,71 @@
+ {
+  "info": {
+    "_postman_id": "e69aba7d-d066-4c9a-945c-4dafe9b90652",
+    "name": "API Tarefas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56801915",
+    "_collection_link": "https://go.postman.co/collection/56801915-e69aba7d-d066-4c9a-945c-4dafe9b90652?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Criar Tarefa",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Estudar Express\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3333",
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Tarefas",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar por tarefa",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Tarefa",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir Tarefa",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
