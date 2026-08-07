@@ -1,4 +1,4 @@
- {
+{
   "info": {
     "_postman_id": "e69aba7d-d066-4c9a-945c-4dafe9b90652",
     "name": "API Tarefas",
@@ -22,12 +22,12 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3333/tasks",
+          "raw": "http://localhost:3030/tasks",
           "protocol": "http",
           "host": [
             "localhost"
           ],
-          "port": "3333",
+          "port": "3030",
           "path": [
             "tasks"
           ]
@@ -39,7 +39,18 @@
       "name": "Listar Tarefas",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3030/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "tasks"
+          ]
+        }
       },
       "response": []
     },
@@ -47,23 +58,72 @@
       "name": "Buscar por tarefa",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3030/tasks/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "tasks",
+            "1"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Atualizar Tarefa",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Aprender Prisma\",\n  \"completed\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3030/tasks/999999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "tasks",
+            "999999"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Excluir Tarefa",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Estudar Express\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3030/tasks/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3030",
+          "path": [
+            "tasks",
+            "1"
+          ]
+        }
       },
       "response": []
     }
