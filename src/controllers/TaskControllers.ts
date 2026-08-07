@@ -8,7 +8,7 @@ import {
     deleteTask,
 } from "../services/TaskService"
 
-export function create(req: Request, res: Response) {
+export async function create(req: Request, res: Response) {
     const { title } = req.body
 
     if (!title) {
@@ -17,21 +17,21 @@ export function create(req: Request, res: Response) {
         })
     }
 
-    const task = createTask(title)
+    const task = await createTask(title)
     
     return res.status(201).json(task)
 }
 
-export function list(req: Request, res: Response) {
-  const tasks = getAllTasks()
+export async function list(req: Request, res: Response) {
+  const tasks = await getAllTasks()
 
   return res.status(200).json(tasks)
 }
 
-export function findById(req: Request, res: Response) {
+export async function findById(req: Request, res: Response) {
     const id = Number(req.params.id)
 
-    const task = getTaskById(id)
+    const task = await getTaskById(id)
 
     if (!task) {
         return res.status(404).json({
@@ -42,12 +42,12 @@ export function findById(req: Request, res: Response) {
     return res.status(200).json(task)
 }
 
-export function update(req: Request, res: Response) {
+export async function update(req: Request, res: Response) {
   const id = Number(req.params.id)
 
   const { title, completed } = req.body
 
-  const task = updateTask(
+  const task = await updateTask(
     id,
     title,
     completed
@@ -62,10 +62,10 @@ export function update(req: Request, res: Response) {
   return res.status(200).json(task)
 }
 
-export function remove(req: Request, res: Response) {
+export async function remove(req: Request, res: Response) {
     const id = Number(req.params.id)
 
-    const deleted = deleteTask(id)
+    const deleted = await deleteTask(id)
 
     if (!deleted) {
         return res.status(404).json({
