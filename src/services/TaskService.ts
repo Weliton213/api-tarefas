@@ -34,9 +34,9 @@ export function updateTask(
         return undefined
     }
 
-    if (title !== undefined) [
+    if (title !== undefined) {
         task.title = title
-    ]
+    }
 
     if (completed !== undefined) {
         task.completed = completed
